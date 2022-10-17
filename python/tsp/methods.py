@@ -1,5 +1,3 @@
-from math import perm
-from operator import mod
 import numpy 
 import random
 import instance 

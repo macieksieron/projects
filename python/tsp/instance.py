@@ -11,7 +11,7 @@ def d(x1, y1, x2, y2):
 class Instance:
     def __init__(self, instance):
         self.instance = instance
-        self.name = instance.name
+        self.name = "instances/"+instance.name
         self.type = instance.type
         self.dimension = int(instance.dimension)
         self.format = instance.edge_weight_format

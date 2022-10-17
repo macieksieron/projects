@@ -148,7 +148,7 @@ public class Game extends JPanel implements ActionListener {
 				if (anythingSelected == false
 						&& board.fields.get(i).isInside(event.getPoint().getX(), event.getPoint().getY()) == true) {
 					if (isMuted == false)
-						playSound("click.wav");
+						playSound("resources/click.wav");
 					board.fields.get(i).isSelected = true; // ..make this field selected
 					anythingSelected = true; // something on board is selected now
 					anythingSelectedThisClick = true; // something has been selected on this click

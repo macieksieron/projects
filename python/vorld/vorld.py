@@ -98,7 +98,7 @@ window['bg']= '#f8f4fc'
 window.title('Vorld')
 window.geometry("800x600+300+100")
 
-world = [PhotoImage(file='world.gif',format = 'gif -index %i' %(i)) for i in range(124)]
+world = [PhotoImage(file='resources/world.gif',format = 'gif -index %i' %(i)) for i in range(124)]
 
 button = Button(window, text="x1",command=changeSpeed)
 button.place(x=10,y=10)
@@ -113,31 +113,31 @@ label.config(height=300,width=300)
 label['bg']= '#f8f4fc'
 label.place(x=400,y=100)
 
-temple_png = PhotoImage(file="temple.png")
+temple_png = PhotoImage(file="resources/temple.png")
 temple = Label(window,image=temple_png)
 temple.place(x=20,y=80)
 
-castle_png = PhotoImage(file="castle.png")
+castle_png = PhotoImage(file="resources/castle.png")
 castle = Label(window,image=castle_png)
 castle.place(x=20,y=160)
 
-house_png = PhotoImage(file="house.png")
+house_png = PhotoImage(file="resources/house.png")
 house = Label(window,image=house_png)
 house.place(x=20,y=240)
 
-village_png = PhotoImage(file="village.png")
+village_png = PhotoImage(file="resources/village.png")
 village = Label(window,image=village_png)
 village.place(x=20,y=320)
 
-skyscraper_png = PhotoImage(file="skyscraper.png")
+skyscraper_png = PhotoImage(file="resources/skyscraper.png")
 skyscraper = Label(window,image=skyscraper_png)
 skyscraper.place(x=20,y=400)
 
-space_png = PhotoImage(file="space.png")
+space_png = PhotoImage(file="resources/space.png")
 space = Label(window,image=space_png)
 space.place(x=20,y=480)
 
-plus_png = PhotoImage(file="plus.png")
+plus_png = PhotoImage(file="resources/plus.png")
 
 temples_txt = Label(window,text=str(temples))
 temples_txt.place(x=140,y=100)

@@ -29,27 +29,27 @@ def generateMatrix(points):
     return matrix
 
 def EuclideanInstance(name, n,seed):
-    open(name+".tsp",'w').close()
-    add_line(name+".tsp","NAME: "+name+"\n")
-    add_line(name+".tsp","TYPE: TSP\n")
-    add_line(name+".tsp","COMMENT: NONE\n")
-    add_line(name+".tsp","DIMENSION: "+str(n)+"\n")
-    add_line(name+".tsp","EDGE_WEIGHT_TYPE: EUC_2D\n")
-    add_line(name+".tsp","NODE_COORD_SECTION\n")
+    open("instances/"+name+".tsp",'w').close()
+    add_line("instances/"+name+".tsp","NAME: "+name+"\n")
+    add_line("instances/"+name+".tsp","TYPE: TSP\n")
+    add_line("instances/"+name+".tsp","COMMENT: NONE\n")
+    add_line("instances/"+name+".tsp","DIMENSION: "+str(n)+"\n")
+    add_line("instances/"+name+".tsp","EDGE_WEIGHT_TYPE: EUC_2D\n")
+    add_line("instances/"+name+".tsp","NODE_COORD_SECTION\n")
     points = generatePoints(n,seed)
     for i in range(n):
-        add_line(name+".tsp",str(i+1) + " " + str(points[i][0]) + " " + str(points[i][1]) + "\n")
-    add_line(name+".tsp","EOF\n")
+        add_line("instances/"+name+".tsp",str(i+1) + " " + str(points[i][0]) + " " + str(points[i][1]) + "\n")
+    add_line("instances/"+name+".tsp","EOF\n")
 
 def SymetricInstance(name, n,seed):
-    open(name+".tsp",'w').close()
-    add_line(name+".tsp","NAME: "+name+"\n")
-    add_line(name+".tsp","TYPE: TSP\n")
-    add_line(name+".tsp","COMMENT: NONE\n")
-    add_line(name+".tsp","DIMENSION: "+str(n)+"\n")
-    add_line(name+".tsp","EDGE_WEIGHT_TYPE: EXPLICIT\n")
-    add_line(name+".tsp","EDGE_WEIGHT_FORMAT: FULL_MATRIX\n")
-    add_line(name+".tsp","EDGE_WEIGHT_SECTION\n")
+    open("instances/"+name+".tsp",'w').close()
+    add_line("instances/"+name+".tsp","NAME: "+name+"\n")
+    add_line("instances/"+name+".tsp","TYPE: TSP\n")
+    add_line("instances/"+name+".tsp","COMMENT: NONE\n")
+    add_line("instances/"+name+".tsp","DIMENSION: "+str(n)+"\n")
+    add_line("instances/"+name+".tsp","EDGE_WEIGHT_TYPE: EXPLICIT\n")
+    add_line("instances/"+name+".tsp","EDGE_WEIGHT_FORMAT: FULL_MATRIX\n")
+    add_line("instances/"+name+".tsp","EDGE_WEIGHT_SECTION\n")
     matrix = [[None for _ in range(n)] for _ in range(n)]
     for i in range(n):
         for j in range(i,n):
@@ -59,26 +59,26 @@ def SymetricInstance(name, n,seed):
                 matrix[i][j]=matrix[j][i]=random.randint(0,999)
     for row in matrix:
         for element in row:
-            add_line(name+".tsp","{:<3}".format(str(element))+" ")
-        add_line(name+".tsp","\n")
-    add_line(name+".tsp","EOF\n")
+            add_line("instances/"+name+".tsp","{:<3}".format(str(element))+" ")
+        add_line("instances/"+name+".tsp","\n")
+    add_line("instances/"+name+".tsp","EOF\n")
 
 def AsymetricInstance(name, n,seed):
-    open(name+".atsp",'w').close()
-    add_line(name+".atsp","NAME: "+name+"\n")
-    add_line(name+".atsp","TYPE: ATSP\n")
-    add_line(name+".atsp","COMMENT: NONE\n")
-    add_line(name+".atsp","DIMENSION: "+str(n)+"\n")
-    add_line(name+".atsp","EDGE_WEIGHT_TYPE: EXPLICIT\n")
-    add_line(name+".atsp","EDGE_WEIGHT_FORMAT: FULL_MATRIX\n")
-    add_line(name+".atsp","EDGE_WEIGHT_SECTION\n")
+    open("instances/"+name+".atsp",'w').close()
+    add_line("instances/"+name+".atsp","NAME: "+name+"\n")
+    add_line("instances/"+name+".atsp","TYPE: ATSP\n")
+    add_line("instances/"+name+".atsp","COMMENT: NONE\n")
+    add_line("instances/"+name+".atsp","DIMENSION: "+str(n)+"\n")
+    add_line("instances/"+name+".atsp","EDGE_WEIGHT_TYPE: EXPLICIT\n")
+    add_line("instances/"+name+".atsp","EDGE_WEIGHT_FORMAT: FULL_MATRIX\n")
+    add_line("instances/"+name+".atsp","EDGE_WEIGHT_SECTION\n")
     random.seed(seed)
     for i in range(n):
         for j in range(n):
             if i==j:
-                add_line(name+".atsp","{:<3}".format("-1")+" ")
+                add_line("instances/"+name+".atsp","{:<3}".format("-1")+" ")
             else:
-                add_line(name+".atsp","{:<3}".format(str(random.randint(0,999)))+" ")
-        add_line(name+".atsp","\n")
-    add_line(name+".atsp","EOF\n")
+                add_line("instances/"+name+".atsp","{:<3}".format(str(random.randint(0,999)))+" ")
+        add_line("instances/"+name+".atsp","\n")
+    add_line("instances/"+name+".atsp","EOF\n")
 

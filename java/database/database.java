@@ -1,6 +1,10 @@
-// javac -classpath mysql-connector-java-8.0.27.jar database.java
-// java -classpath mysql-connector-java-8.0.27.jar database.java
-// todo: add .db file
+// sudo /usr/local/mysql/support-files/mysql.server start
+
+// javac -classpath resources/mysql-connector-java-8.0.27.jar database.java
+// java -classpath resources/mysql-connector-java-8.0.27.jar database.java
+
+// you have to manually add Viewer,Editor and Admin with proper previlages
+
 import java.sql.*;  
 import java.util.Scanner;
 

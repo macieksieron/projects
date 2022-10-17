@@ -65,12 +65,12 @@ button = Button(window, text="roll",command=lambda:roll(0,rolls[which],rolls[whi
 button.place(x=10,y=10)
 button['bg']= 'white'
 
-one = [PhotoImage(file='one.gif',format = 'gif -index %i' %(i)) for i in range(53)]
-two = [PhotoImage(file='two.gif',format = 'gif -index %i' %(i)) for i in range(49)]
-three = [PhotoImage(file='three.gif',format = 'gif -index %i' %(i)) for i in range(51)]
-four = [PhotoImage(file='four.gif',format = 'gif -index %i' %(i)) for i in range(50)]
-five = [PhotoImage(file='five.gif',format = 'gif -index %i' %(i)) for i in range(50)]
-six = [PhotoImage(file='six.gif',format = 'gif -index %i' %(i)) for i in range(48)]
+one = [PhotoImage(file='resources/one.gif',format = 'gif -index %i' %(i)) for i in range(53)]
+two = [PhotoImage(file='resources/two.gif',format = 'gif -index %i' %(i)) for i in range(49)]
+three = [PhotoImage(file='resources/three.gif',format = 'gif -index %i' %(i)) for i in range(51)]
+four = [PhotoImage(file='resources/four.gif',format = 'gif -index %i' %(i)) for i in range(50)]
+five = [PhotoImage(file='resources/five.gif',format = 'gif -index %i' %(i)) for i in range(50)]
+six = [PhotoImage(file='resources/six.gif',format = 'gif -index %i' %(i)) for i in range(48)]
 
 rolls = []
 rolls.append(one)

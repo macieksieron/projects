@@ -8,7 +8,7 @@ public class Board
 	List<Player> players;
 	public int turn = 1;
 	
-	public void generateEmptyBoard()	// constant board generator 
+	public void generateEmptyBoard()	// generate constant board  
 	{
 		fields = new ArrayList<Field>();
 		

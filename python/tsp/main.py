@@ -6,7 +6,6 @@ import instance
 import methods
 import plot
 import os.path
-import threading
 
 def get_random_permutation(instance):   
     return list(map(lambda x: x + 1, list(numpy.random.permutation(instance.dimension))))
@@ -27,10 +26,10 @@ def main():
         menu = int(input("2.Generate random instance\n"))
         if(menu==1):
             name = input("Name: ")
-            if(os.path.exists(name+".tsp")==True):
-                instanc3 = instance.Instance(tsp.read(open(name+".tsp")))
+            if(os.path.exists("instances/"+name+".tsp")==True):
+                instanc3 = instance.Instance(tsp.read(open("instances/"+name+".tsp")))
             elif(os.path.exists(name+".atsp")==True):
-                instanc3 = instance.Instance(tsp.read(open(name+".atsp")))
+                instanc3 = instance.Instance(tsp.read(open("instances/"+name+".atsp")))
             else:
                 print("There is no " + name + " file")
                 quit()
@@ -48,10 +47,10 @@ def main():
                     generate.SymetricInstance(name,n,seed)
                 case 3:
                     generate.AsymetricInstance(name,n,seed)
-            if(os.path.exists(name+".tsp")==True):
-                instanc3 = instance.Instance(tsp.read(open(name+".tsp")))
-            elif(os.path.exists(name+".atsp")==True):
-                instanc3 = instance.Instance(tsp.read(open(name+".atsp")))
+            if(os.path.exists("instances/"+name+".tsp")==True):
+                instanc3 = instance.Instance(tsp.read(open("instances/"+name+".tsp")))
+            elif(os.path.exists("instances/"+name+".atsp")==True):
+                instanc3 = instance.Instance(tsp.read("instances/"+open(name+".atsp")))
         
         while(True):
             print("1. k-random")
@@ -60,7 +59,7 @@ def main():
             print("4. 2-opt")
             print("5. tabu search")
             print("6. display matrix")
-            menu = int(input("8. back\n"))                
+            menu = int(input("7. back\n"))                
             match menu:
                 case 1:
                     k = int(input("k: "))

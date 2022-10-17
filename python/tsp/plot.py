@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plot
-import numpy as np
 
 def draw_plot(instance,solution,title):
     x = []

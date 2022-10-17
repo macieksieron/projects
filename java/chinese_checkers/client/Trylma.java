@@ -7,6 +7,8 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.JFrame;
+import java.io.PrintWriter;
+import java.io.File;
 
 public class Trylma 
 {
@@ -100,7 +102,7 @@ public class Trylma
 	                if (response.startsWith("MOVE"))	// when someone moves, but does not jump over other pawn 
 	                {
 	                	if(panel.isMuted==false && panel.board.turn==my_number-48)
-	                		playSound("click.wav");
+	                		playSound("resources/click.wav");
 	                	int from = Integer.parseInt(response.substring(5,8));	// get "from-field" from MOVE message
 	                	int to = Integer.parseInt(response.substring(9,12));	// get "for-field" from MOVE message
 	                	panel.move(from,to); // move pawns on board
@@ -109,7 +111,7 @@ public class Trylma
 	                else if (response.startsWith("STILL_")) // when someone jumps over other pawn
 	                {
 	                	if(panel.isMuted==false && panel.board.turn==my_number-48)
-	                		playSound("click.wav");
+	                		playSound("resources/click.wav");
 	                	int from = Integer.parseInt(response.substring(11,14)); // get "from-field" from MOVE message
 	                	int to = Integer.parseInt(response.substring(15,18));	// get "for-field" from MOVE message
 	                	panel.move(from,to); // move pawns on board
@@ -123,13 +125,13 @@ public class Trylma
 	                } 
 	                else if (response.startsWith("MESSAGE")) // when server send us a message to print on screen
 	                {
-	                    panel.messege.setText(response.substring(8));	// get this message and print it
+	                    panel.message.setText(response.substring(8));	// get this message and print it
 	                	
 	                } 
 	                else if (response.startsWith("WRONG")) // when someone do the wrong move
 	                {
 	                	if(panel.isMuted==false)	// play proper sound
-	                		playSound("wrong.wav");
+	                		playSound("resources/wrong.wav");
 	                	
 	                } 
 	                else if (response.startsWith("TURN")) // when server want to set who starts the game
@@ -140,7 +142,7 @@ public class Trylma
 	                else if (response.startsWith("SKIP")) // when someone skipped/end his turn
 	                {
 	                	if(panel.isMuted==false && panel.board.turn==my_number-48)
-	                 		playSound("skip.wav");	// play proper sound
+	                 		playSound("resources/skip.wav");	// play proper sound
 	                }
 	            }
 	            out.println("QUIT");	

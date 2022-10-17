@@ -216,7 +216,6 @@ public class Game
 	                if(isMoveLegal(from,to,number)=="1" && last_field==-1) // if this move is legal and we have not JUMP in this turn (and do not JUMP now)
 	                {
 	                	move(from,to);	// move pawn 
-	                	history.add(new Move(from,to));
 	                    System.out.println("Player " + number + " moved from field " + from + " to field " + to);
 
 	                    if(doesPlayerWin(number)==true)	// if player finieshed a game after this move
@@ -272,7 +271,6 @@ public class Game
 	                else if(isMoveLegal(from,to,number)=="2" && (last_field==from || last_field==-1))
 	                {
 	                	move(from,to);	// move pawn
-	                	history.add(new Move(from,to));
 	                	last_field = to;	// set where we jumped 
 	                    System.out.println("Player " + currentPlayer + " moved from field " + from + " to field " + to);
 	                    
