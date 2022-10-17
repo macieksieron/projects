@@ -20,7 +20,7 @@ class Area extends JPanel
 		
         player = new Player(100,100);
 		add(player);
-		tavern = new NPC(570,-70,163,228,"tavern.png");
+		tavern = new NPC(570,-70,163,228,"/tavern.png");
 		add(tavern);
 		
 		player.getInputMap().put(KeyStroke.getKeyStroke('w'), "w");
@@ -50,20 +50,20 @@ class Area extends JPanel
 				if(player.getX()<0)
 				{
 					player.setLocation(1237,player.getY());
-					setNewBackground("sand.png");
+					setNewBackground("/sand.png");
 					location = "sand";
 				}
 				if(player.getX()>1237)
 				{
 					player.setLocation(0,player.getY());
-					setNewBackground("ice.png");
+					setNewBackground("/ice.png");
 					location = "ice";
 				}
 					
 				if(player.getY()<135 && player.getX()>520 && player.getX()<700)
 				{
 					player.setLocation(620,590);
-					setNewBackground("wood.png");
+					setNewBackground("/wood.png");
 					location = "tavern";
 				}
 				
@@ -72,7 +72,7 @@ class Area extends JPanel
 				if(player.getY()>590)
 				{
 					player.setLocation(player.getX(),0);
-					setNewBackground("stone.png");
+					setNewBackground("/stone.png");
 					location = "stone";
 				}
 			break;
@@ -82,7 +82,7 @@ class Area extends JPanel
 				if(player.getX()>1237)
 				{
 					player.setLocation(0,player.getY());
-					setNewBackground("grass.png");
+					setNewBackground("/grass.png");
 					location = "grass";
 				}
 				if(player.getX()<0)
@@ -102,7 +102,7 @@ class Area extends JPanel
 				if(player.getY()<0)
 				{
 					player.setLocation(player.getX(),590);
-					setNewBackground("grass.png");
+					setNewBackground("/grass.png");
 					location = "grass";
 				}
 				if(player.getY()>590)
@@ -116,7 +116,7 @@ class Area extends JPanel
 				if(player.getX()<0)
 				{
 					player.setLocation(1237,player.getY());
-					setNewBackground("grass.png");
+					setNewBackground("/grass.png");
 					location = "grass";
 				}
 				if(player.getY()<0)
@@ -136,7 +136,7 @@ class Area extends JPanel
 				if(player.getY()>590)
 				{
 					player.setLocation(620,200);
-					setNewBackground("grass.png");
+					setNewBackground("/grass.png");
 					location = "grass";
 				}
 			break;
@@ -157,8 +157,8 @@ class Area extends JPanel
 		
 		background.setBounds(0, 0, 1300, 700);
 		background2.setBounds(650, 0, 1300, 700);
-		background.setIcon(new ImageIcon(Area.class.getResource("grass.png")));
-		background2.setIcon(new ImageIcon(Area.class.getResource("grass.png")));
+		background.setIcon(new ImageIcon(Area.class.getResource("/grass.png")));
+		background2.setIcon(new ImageIcon(Area.class.getResource("/grass.png")));
 		add(background);
 		add(background2);	
 		

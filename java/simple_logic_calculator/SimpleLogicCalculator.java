@@ -9,7 +9,6 @@ public class SimpleLogicCalculator extends JFrame implements ActionListener
 	String[] values = new String[] {"0","1"};
 	JLabel result;
 	JComboBox<String> value,value2,operator;
-	int i=0;
 	
 	SimpleLogicCalculator()
 	{
