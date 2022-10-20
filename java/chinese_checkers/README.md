@@ -1,14 +1,14 @@
 # compilation and run
 
 ## server
-first compile and run server:__
-javac Server.java__
-java Server__
+first compile and run server:  
+javac Server.java  
+java Server  
 after choosing number of players server will turn on
 
 ## client
-ten compile and run clients:__
-javac Trylma.java__
-java Trylma__
+ten compile and run clients:  
+javac Trylma.java  
+java Trylma  
 
 When enough clients will connect game will start.
