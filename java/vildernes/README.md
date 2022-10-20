@@ -1,5 +1,5 @@
 # compilation and run
 
-javac Vildernes.java
+javac Vildernes.java  
 java Vildernes
 

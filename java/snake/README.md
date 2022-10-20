@@ -1,5 +1,5 @@
 # compilation and run
 
-javac Snake.java
+javac Snake.java  
 java Snake
 
