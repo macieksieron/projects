@@ -1,3 +1,3 @@
 # compilation and run
 
-ptyhon3 vorld.py
+python3 vorld.py
