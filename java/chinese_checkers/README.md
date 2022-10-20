@@ -7,7 +7,7 @@ java Server
 after choosing number of players server will turn on
 
 ## client
-ten compile and run clients:  
+then compile and run clients:  
 javac Trylma.java  
 java Trylma  
 
