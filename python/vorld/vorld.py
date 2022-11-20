@@ -6,7 +6,7 @@ def update(index):
     frame = world[index]
     population += population_increase
     money += money_increase
-    population_txt.configure(text = "Population: " + str(round(population)) + " | " + str(round(money)) + "$" + " (" + str(round(population_increase*(1000/60))) + " people/s" + ", " + str(round(money_increase*(1000/60))) + "$/s)")
+    population_txt.configure(text = "Population: " + str(round(population)) + " | " + str(round(money)) + "$" + " (" + str(round(population_increase*(1000/60))) + " people/s" + ", " + str(round(money_increase*(1000/60))) + "$/s)",foreground="black")
     index += 1
     if index == 124:
         index = 0

@@ -42,7 +42,7 @@ def roll(index,number,number2,number3,number4,number5):
     frame5 = number5[index]
     index += 1
     if index == len(number) or index == len(number2) or index == len(number3) or index == len(number4) or index == len(number5):
-        result.configure(text = getResult(which,which2,which3,which4,which5))
+        result.configure(text = getResult(which,which2,which3,which4,which5),foreground="black")
         which = random.randrange(0,6)
         which2 = random.randrange(0,6)
         which3 = random.randrange(0,6)
