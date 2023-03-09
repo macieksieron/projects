@@ -1,9 +1,10 @@
 # projects
 
 ## python
-1) vorld - simple incremental game 
-2) dice - dice throwing simulator
-3) TSP - traveling salesman problem (load instances from file, generate instances (euclidean,symetric,asymetric), display matrixes, calculate goal functions, find solution with diffrent algorithms, draw plots)
+1) compiler - compiler for simple imperative language with variables, procedures, some loops and ifelses (specification in pdf file), generates assembler code, which you can execute with virtual machine. (vm and example code to compile are inside the folder)
+2) TSP - traveling salesman problem (load instances from file, generate instances (euclidean,symetric,asymetric), display matrixes, calculate goal functions, find solution with diffrent algorithms, draw plots)
+3) vorld - simple incremental game 
+4) dice - dice throwing simulator
 
 ## java
 1) chinese checkers - client-server game, rules: https://www.ducksters.com/games/chinese_checkers.php
@@ -17,4 +18,4 @@
 1) cv - website with my cv
 
 ## flutter, dart
-1) landlord manager - mobile app for creating (from google maps) and managing you plot by drawing objects etc. 
+1) landlord manager - mobile app for creating (from google maps) and managing you plot by drawing objects etc. (contains also database)
