@@ -19,3 +19,6 @@
 
 ## flutter, dart
 1) landlord manager - mobile app for creating (from google maps) and managing you plot by drawing objects etc. (contains also database)
+
+## tsp (engineering thesis)
+analysis and comparison of algorithms solving travelling salesman problem (in polish), codes in julia and python 
